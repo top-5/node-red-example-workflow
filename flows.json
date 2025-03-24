@@ -68,5 +68,109 @@
         "x": 910,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "e107bce098491c76",
+        "type": "exec",
+        "z": "4da54320b85f4178",
+        "command": "pwsh ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 910,
+        "y": 580,
+        "wires": [
+            [
+                "66ef0232d443f99c",
+                "ea858aa106fd36e4"
+            ],
+            [
+                "ea858aa106fd36e4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "527cb4889b78d435",
+        "type": "http in",
+        "z": "4da54320b85f4178",
+        "name": "Exec-Workflow",
+        "url": "/workflows/exec",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "bf7d546e4b78bba3"
+            ]
+        ]
+    },
+    {
+        "id": "bf7d546e4b78bba3",
+        "type": "json",
+        "z": "4da54320b85f4178",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "547b53f6133872ce",
+                "e107bce098491c76"
+            ]
+        ]
+    },
+    {
+        "id": "547b53f6133872ce",
+        "type": "debug",
+        "z": "4da54320b85f4178",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "66ef0232d443f99c",
+        "type": "http response",
+        "z": "4da54320b85f4178",
+        "name": "Command Output",
+        "statusCode": "",
+        "headers": {},
+        "x": 1210,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ea858aa106fd36e4",
+        "type": "debug",
+        "z": "4da54320b85f4178",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 660,
+        "wires": []
     }
 ]
