@@ -1,1 +1,72 @@
-[]
+[
+    {
+        "id": "4da54320b85f4178",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9d3418bd2bdfdf91",
+        "type": "http in",
+        "z": "4da54320b85f4178",
+        "name": "Start-Workflow",
+        "url": "/workflows/start",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "7b289271ceed0605"
+            ]
+        ]
+    },
+    {
+        "id": "7b289271ceed0605",
+        "type": "json",
+        "z": "4da54320b85f4178",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "7d699fe12a390f3e",
+                "6dd75b7c75dbd4d4"
+            ]
+        ]
+    },
+    {
+        "id": "7d699fe12a390f3e",
+        "type": "debug",
+        "z": "4da54320b85f4178",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6dd75b7c75dbd4d4",
+        "type": "http response",
+        "z": "4da54320b85f4178",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 140,
+        "wires": []
+    }
+]
