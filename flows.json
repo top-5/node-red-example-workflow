@@ -16,8 +16,8 @@
         "method": "post",
         "upload": true,
         "swaggerDoc": "",
-        "x": 380,
-        "y": 80,
+        "x": 460,
+        "y": 240,
         "wires": [
             [
                 "7b289271ceed0605"
@@ -32,8 +32,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 590,
-        "y": 80,
+        "x": 670,
+        "y": 240,
         "wires": [
             [
                 "7d699fe12a390f3e",
@@ -54,8 +54,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 80,
+        "x": 930,
+        "y": 240,
         "wires": []
     },
     {
@@ -65,8 +65,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 830,
-        "y": 140,
+        "x": 910,
+        "y": 300,
         "wires": []
     }
 ]
